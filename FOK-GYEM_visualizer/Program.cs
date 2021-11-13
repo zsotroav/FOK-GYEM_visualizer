@@ -37,8 +37,10 @@ namespace FOK_GYEM_visualizer
             {
                 Console.Write(bits[i] ? "X" : "-");
                 if ((i + 1) % 24 == 0) Console.Write(" ");
-                if ((i + 1) % 168 == 0) Console.Write("\n");
+                if ((i + 1) % (bits.Length/7) == 0) Console.Write("\n");
             }
+
+            Console.ReadKey();
         }
     }
 }
